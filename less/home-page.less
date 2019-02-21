@@ -1,7 +1,15 @@
 .home {
+  @media @mobile {
+    width: 100%;
+  }
+
   .topic {
     margin: 30px 0;
     border-bottom: 1px dashed black;
+
+    @media @mobile {
+      margin: 30px 20px;
+    }
 
     .text-topic {
       p {
@@ -16,15 +24,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-flow: column wrap;
+      margin: 30px 20px;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
       img {
         border-radius: 10px;
       }
@@ -34,6 +54,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-flow: column-reverse wrap;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -50,6 +74,13 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 90%;
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+
     img {
       border-radius: 10px;
     }
@@ -61,12 +92,26 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-flow: row wrap;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile {
+        margin: 20px 40px;
+        width: 90%;
+      }
+
       .btn {
         .main-btn();
+
+        @media @mobile {
+          margin-left: 15px;
+          .main-btn(90%);
+        }
       }
     }
   }
